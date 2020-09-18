@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.header{
+    padding: 2rem;
+    background: #005AA7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 70vh;
+}
+.header-logo{
+    width: 8rem;
+    height: 8rem;
+}
+
+.header-title{
+    color: white;
+    text-align: center;
+    font-size: 7rem;
+    font-weight: lighter;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.header-subtitle{
+text-align: center;
+color: white;
+}
+
