@@ -1,0 +1,48 @@
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue",sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #777;
+  padding: 30px;
+}
+
+.container {
+  margin: 0;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)),
+    url(./images/concert.jpg);
+  /* background-blend-mode: lighten; */
+  background-size: cover;
+  background-position: center;
+  /* position: relative; */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.titleBox {
+  position: absolute;
+  /* % from the top/left of parent element */
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  /* border: red 1px solid; */
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.titleMain {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.titleSub {
+  display: block;
+  font-size: 20px;
+}
