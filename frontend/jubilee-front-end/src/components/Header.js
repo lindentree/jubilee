@@ -1,14 +1,12 @@
 import React from 'react';
+import Navbar from './Navbar';
 import styles from '../styles.module.css';
-import icon from '../images/music-icon.png';
 
 function Header() {
   return (
-    <div>
 
       <div className={styles.headerContainer}>
-       <img src={icon} alt="" className={styles.icon}/>
-
+        <Navbar />
         <div className={styles.titleBox}>
           <h1 className={styles.title}>
             <span className={styles.titleMain}>JUBILEE</span>
@@ -21,7 +19,6 @@ function Header() {
           </p>
         </div>
       </div>
-    </div>
   );
 }
 
