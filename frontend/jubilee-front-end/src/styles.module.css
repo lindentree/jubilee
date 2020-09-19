@@ -29,7 +29,7 @@ link {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  text-shadow: 1px 1px 8px #afaeae;
+  /* text-shadow: 1px 1px 8px #afaeae; */
   /* border: red 1px solid; */
 }
 
@@ -112,7 +112,7 @@ link {
   color: #777;
   font-weight: 100;
   outline: none;
-  box-shadow: 2px 2px 8px #afaeae;
+  /* box-shadow: 2px 2px 8px #afaeae; */
 }
 
 .searchBtn:hover {
