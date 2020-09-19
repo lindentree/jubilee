@@ -2,6 +2,7 @@ import React from 'react';
 import Search from './Search';
 import Display from './Display'
 import data from '../data/data.json';
+import Recommendation from './Recommendation';
 
 class Parent extends React.Component {
      constructor(props){

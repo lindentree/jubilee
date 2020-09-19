@@ -12,9 +12,9 @@ class Display extends React.Component {
          return (
            <div className={styles.row}>
             <div className={styles.rowTitle}>{item["Song"]}</div>
-            <div className={styles.rowSubTitle}> By  {item["Artist"]}</div>
+            <div className={styles.rowSubTitle}> ~ By  {item["Artist"]}</div>
             <div className = {styles.rowAudio}>
-              <a href={item["Link"]} target="blank">Watch it on 
+              <a href={item["Link"]} target="blank">Watch it on
               <img className={styles.youtubeIcon} src={Youtube}></img>
               </a>
             </div>
