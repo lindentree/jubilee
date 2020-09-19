@@ -140,11 +140,61 @@ input::-webkit-input-placeholder {
 */
 
 .displayContainer {
-  width: 70%;
   display: grid;
   text-align: center;
   position: absolute;
   top: 105%;
   left: auto;
-  border: 1px solid red;
+  right: auto;
+  grid-template-columns: auto auto auto;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.row{
+  padding: 1.5rem;
+  border-radius: 20px;
+background: #ffffff;
+box-shadow:  20px 20px 60px #d9d9d9, 
+             -20px -20px 60px #ffffff;
+}
+.rowTitle{
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  
+}
+.rowSubTitle{
+  font-size: 0.8rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+ .rowAudio{
+  padding: 1rem;
+
+ } 
+ .rowAudio a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+ 
+}
+
+.LyricsHead{
+  font-size: 1.8rem;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.rowLyrics{
+  font-size: 1rem;
+  font-weight: 200;
+  text-align: center;
+  line-height: 2rem;
+}
+.youtubeIcon{
+vertical-align: text-bottom;
+margin-left: 1rem;
 }

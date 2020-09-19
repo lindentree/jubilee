@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles.module.css';
+import data from '../data/data.json';
 
 class Search extends React.Component {
   constructor(props) {
@@ -16,12 +17,13 @@ class Search extends React.Component {
     this.setState({
       value: e.target.value
     });
-
+    this.props.search(e.target.value);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('submit button hit');
+    let lyrics = document.querySelector('#input').value;
+    this.props.search(lyrics);
     e.target.reset();
   }
 
@@ -38,6 +40,7 @@ class Search extends React.Component {
             type="text"
             name="lyrics"
             onChange={this.handleChange}
+            required
             placeholder="Type the lyrics in your mind..."
           />
           <button type="submit" value="submit"
