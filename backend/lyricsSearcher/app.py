@@ -40,17 +40,6 @@ def index(num_docs):
         )
 
 
-"""def query(top_k):
-    f = Flow().load_config("flow-query.yml")
-    with f:
-        while True:
-            text = input("please type a sentence: ")
-            if not text:
-                break
-
-            def ppr(x):
-                print_topk(x, text)
-            f.search_files([text, ], output_fn=ppr, top_k=top_k)"""
 
 def query(top_k):
     f = Flow().load_config("flow-query.yml")
