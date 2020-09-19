@@ -11,5 +11,8 @@ pods:
     uses: pods/index-chunk.yml
     polling: all
     uses_reducing: _merge_all
+  ranker:
+      uses: BM25Ranker
+      read_only: true
   doc_indexer:
     uses: pods/index-doc.yml
