@@ -29,7 +29,7 @@ def print_topk(resp, sentence):
             if len(meta) == 2:
                 name, artist = meta
             lyrics = match.text.strip()
-            
+
             print(f'> {idx:>2d}({score:.2f}). {name.upper()} :  "{lyrics}"')
 
 def index(num_docs):
@@ -54,7 +54,7 @@ def query(top_k):
 
             def ppr(x):
                 print_topk(x, text)
-            f.search_lines(lines=[text, ], output_fn=ppr, top_k=top_k)
+            f.search_lines(lines=[text,], output_fn=ppr, top_k=top_k)
 
 
 def query_restful():
