@@ -2,7 +2,6 @@
 body {
   margin: 0;
   font-family: "Helvetica", serif;
-  /* color: #777; */
 }
 
 link {
@@ -30,6 +29,7 @@ link {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+  text-shadow: 1px 1px 8px #afaeae;
   /* border: red 1px solid; */
 }
 
@@ -103,6 +103,7 @@ link {
 .searchBtn {
   border: 0;
   padding: 12px 26px;
+  margin-top: 10px;
   border-radius: 100px;
   font-weight: lighter;
   letter-spacing: 1px;
@@ -111,6 +112,7 @@ link {
   color: #777;
   font-weight: 100;
   outline: none;
+  box-shadow: 2px 2px 8px #afaeae;
 }
 
 .searchBtn:hover {
@@ -149,52 +151,55 @@ input::-webkit-input-placeholder {
   grid-template-columns: auto auto auto;
   row-gap: 2rem;
   column-gap: 2rem;
-  margin-bottom: 3rem;
+  margin: 3rem;
 }
 
-.row{
+.row {
   padding: 1.5rem;
   border-radius: 20px;
-background: #ffffff;
-box-shadow:  20px 20px 60px #d9d9d9, 
-             -20px -20px 60px #ffffff;
+  background: #ffffff;
+  box-shadow:  20px 20px 60px #d9d9d9,
+              -20px -20px 60px #ffffff;
 }
+
 .rowTitle{
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
-  
+
 }
-.rowSubTitle{
+
+.rowSubTitle {
   font-size: 0.8rem;
   text-align: left;
   margin-bottom: 0.5rem;
 }
 
- .rowAudio{
+ .rowAudio {
   padding: 1rem;
 
- } 
+ }
+
  .rowAudio a{
   text-decoration: none;
   color: black;
   font-size: 1.4rem;
- 
 }
 
-.LyricsHead{
+.LyricsHead {
   font-size: 1.8rem;
   font-weight: lighter;
   text-align: center;
   margin-bottom: 1rem;
 }
 
-.rowLyrics{
+.rowLyrics {
   font-size: 1rem;
   font-weight: 200;
   text-align: center;
   line-height: 2rem;
 }
-.youtubeIcon{
+
+.youtubeIcon {
 vertical-align: text-bottom;
 margin-left: 1rem;
 }
