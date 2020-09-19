@@ -7,7 +7,7 @@ function Header() {
     <div>
 
       <div className={styles.headerContainer}>
-       <img src={icon} className = {styles.icon}/>
+       <img src={icon} alt="" className={styles.icon}/>
 
         <div className={styles.titleBox}>
           <h1 className={styles.title}>

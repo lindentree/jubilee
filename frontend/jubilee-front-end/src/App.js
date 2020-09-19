@@ -1,13 +1,15 @@
 import React from 'react';
 import Header from './components/Header';
-import SearchBar from './components/SearchBar';
-import styles from './styles.module.css';
+import Search from './components/Search';
+import Display from './components/Display';
+
 
 function App() {
   return (
     <div>
       <Header />
-      <SearchBar />
+      <Search />
+      <Display />
     </div>
   );
 }
