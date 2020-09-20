@@ -17,7 +17,6 @@ def config():
     os.environ["JINA_WORKSPACE"] = os.environ.get("JINA_WORKSPACE", "workspace")
 
     os.environ["JINA_PORT"] = os.environ.get("JINA_PORT", str(46785))
-
    
 
 config()
@@ -35,12 +34,12 @@ def my_index():
 @app.route('/api/search', methods=['POST'])
 def query_restful():
     print(request.__dict__)
-    x = f.use_rest_gateway()
-    
+
+    f.use_rest_gateway()
     with f:
         f.block()
-    print('jina call', x)
-    return x
+    # print('jina call', x)
+    # return x
 
 
 @app.route('/api/test', methods=['GET', 'POST'])
