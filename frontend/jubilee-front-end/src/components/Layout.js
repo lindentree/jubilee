@@ -1,4 +1,4 @@
-import React , {useEffect ,useRef} from 'react';
+import React  from 'react';
 import Search from './Search';
 import Display from './Display'
 import data from '../data/data.json';
@@ -28,7 +28,7 @@ class Parent extends React.Component {
          return(
              <div>
                 <Search search = {this.search}></Search>
-                <Display ref={this.myRef} filtersong = {this.state.mysong}></Display>
+                <Display  filtersong = {this.state.mysong}></Display>
              </div>
          );
      }
