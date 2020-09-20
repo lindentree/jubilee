@@ -141,6 +141,7 @@ input::-webkit-input-placeholder {
   but we don't know what the data will look like yet, so I didn't set row/column.
 */
 
+
 .displayContainer {
   display: grid;
   text-align: center;
@@ -154,6 +155,7 @@ input::-webkit-input-placeholder {
   margin: 3rem;
   /* border: 1px solid green; */
 }
+
 
 .row {
   /* border: 1px solid blue; */
@@ -207,6 +209,8 @@ input::-webkit-input-placeholder {
 }
 
 
+
+
 /* ========== recommendations ========= */
 
 .recommend {
@@ -229,4 +233,22 @@ input::-webkit-input-placeholder {
   font-size: .8em;
   font-style: italic;
   padding-left: 8px;
+}
+
+// Media query to display single column on tablets and mobiles
+
+@media screen and  (max-width:1000px){
+ .displayContainer {
+  display: grid;
+  text-align: center;
+  position: absolute;
+  top: 105%;
+  left: auto;
+  right: auto;
+  grid-template-columns: auto ;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  margin: 3rem;
+  
+} 
 }
