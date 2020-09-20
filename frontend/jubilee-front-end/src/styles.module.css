@@ -79,6 +79,7 @@ link {
   height: 65px;
   margin: 15px 75px 0 50px;
   float: left;
+  color: white;
   /* border: 1px solid blue; */
 }
 
@@ -141,6 +142,7 @@ input::-webkit-input-placeholder {
   but we don't know what the data will look like yet, so I didn't set row/column.
 */
 
+
 .displayContainer {
   display: grid;
   text-align: center;
@@ -154,6 +156,7 @@ input::-webkit-input-placeholder {
   margin: 3rem;
   /* border: 1px solid green; */
 }
+
 
 .row {
   /* border: 1px solid blue; */
@@ -207,10 +210,12 @@ input::-webkit-input-placeholder {
 }
 
 
+
+
 /* ========== recommendations ========= */
 
 .recommend {
-  padding: 50px 28px;
+  padding: 50px 35px;
   margin: 50px;
   border-radius: 20px;
   background: #ffffff;
@@ -229,4 +234,27 @@ input::-webkit-input-placeholder {
   font-size: .8em;
   font-style: italic;
   padding-left: 8px;
+}
+
+/* Media query to display single column on tablets and mobiles*/
+
+@media screen and  (max-width:1000px){
+ .displayContainer {
+  display: grid;
+  text-align: center;
+  position: absolute;
+  top: 105%;
+  left: auto;
+  right: auto;
+  grid-template-columns: auto ;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  margin: 3rem;
+  
+} 
+}
+.floatRight {
+  float: right;
+  margin-top: -30px;
+  color: rgb(226, 224, 224);
 }
