@@ -46,18 +46,16 @@ class Display extends React.Component {
            <div className={styles.row}
             onMouseEnter={this.handleOpenModal}
             onMouseLeave={this.handleCloseModal}
-            onClick={this.handleCloseModal}
            >
             <div className={styles.rowTitle}>{item["Song"]}</div>
-            <div className={styles.rowSubTitle}> ~ By  {item["Artist"]}</div>
-            <div className = {styles.rowAudio}>
+            <div className={styles.rowSubTitle}> ~ By {item["Artist"]}</div>
+            <div className={styles.rowAudio}>
               <a href={item["Link"]} target="blank">Watch it on
-              <img className={styles.youtubeIcon} src={Youtube}></img>
+                <img className={styles.youtubeIcon} src={Youtube} />
               </a>
             </div>
             <div className={styles.LyricsHead}>Lyrics</div>
             <div className={styles.rowLyrics}>{item["Lyrics"]}</div>
-
 
               <Modal
                 isOpen={this.state.showModal}
@@ -67,13 +65,10 @@ class Display extends React.Component {
               >
                 <Recommendation/>
               </Modal>
-
-
            </div>
          );
        })}
       </div>
-
     )
   }
 }
