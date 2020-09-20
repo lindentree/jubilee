@@ -14,7 +14,10 @@ class Parent extends React.Component {
      }
 
      search (lyrics) {
-         
+         if(!lyrics || !lyrics.trim() ){
+            this.setState({mysong:[]})
+             return;
+         }
          const song = data.filter((item )=>{
             if(item["Lyrics"].toLowerCase().includes(lyrics)){
              return item["Lyrics"];

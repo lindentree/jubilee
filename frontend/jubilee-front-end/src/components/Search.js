@@ -19,6 +19,7 @@ class Search extends React.Component {
       value: e.target.value
     });
     this.props.search(e.target.value);
+
   }
 
   handleSubmit(e) {
