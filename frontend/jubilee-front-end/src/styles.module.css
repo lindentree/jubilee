@@ -210,7 +210,7 @@ input::-webkit-input-placeholder {
 /* ========== recommendations ========= */
 
 .recommend {
-  padding: 50px 28px;
+  padding: 50px 35px;
   margin: 50px;
   border-radius: 20px;
   background: #ffffff;
@@ -229,4 +229,10 @@ input::-webkit-input-placeholder {
   font-size: .8em;
   font-style: italic;
   padding-left: 8px;
+}
+
+.floatRight {
+  float: right;
+  margin-top: -30px;
+  color: rgb(226, 224, 224);
 }

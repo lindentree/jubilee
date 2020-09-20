@@ -43,28 +43,31 @@ class Display extends React.Component {
       <div className={styles.displayContainer}>
        {this.props.filtersong.map(item =>{
          return (
-           <div className={styles.row}
-            onMouseEnter={this.handleOpenModal}
-            onMouseLeave={this.handleCloseModal}
+           <div
+             className={styles.row}
+             onMouseEnter={this.handleOpenModal}
+             onMouseLeave={this.handleCloseModal}
            >
-            <div className={styles.rowTitle}>{item["Song"]}</div>
-            <div className={styles.rowSubTitle}> ~ By {item["Artist"]}</div>
-            <div className={styles.rowAudio}>
-              <a href={item["Link"]} target="blank">Watch it on
-                <img className={styles.youtubeIcon} src={Youtube} />
-              </a>
-            </div>
-            <div className={styles.LyricsHead}>Lyrics</div>
-            <div className={styles.rowLyrics}>{item["Lyrics"]}</div>
+             <div className={styles.rowTitle}>{item["Song"]}</div>
+             <div className={styles.rowSubTitle}> ~ By {item["Artist"]}</div>
+             <div className={styles.rowAudio}>
+               <a href={item["Link"]} target="blank">
+                 Watch it on
+                 <img className={styles.youtubeIcon} src={Youtube} />
+               </a>
+             </div>
+             <div className={styles.LyricsHead}>Lyrics</div>
+             <div className={styles.rowLyrics}>{item["Lyrics"]}</div>
 
-              <Modal
-                isOpen={this.state.showModal}
-                onRequestClose={this.handleCloseModal}
-                shouldCloseOnOverlayClick={true}
-                style={customStyles}
-              >
-                <Recommendation/>
-              </Modal>
+             <Modal
+               isOpen={this.state.showModal}
+               onRequestClose={this.handleCloseModal}
+               style={customStyles}
+             >
+               <div onClick={this.handleCloseModal}>
+                 <Recommendation />
+               </div>
+             </Modal>
            </div>
          );
        })}
