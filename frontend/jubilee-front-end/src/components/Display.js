@@ -10,7 +10,11 @@ const customStyles = {
     left: '30%',
     width: '40%',
     border: '0',
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    position: 'absolute'
+  },
+  overlay: {
+    position: 'fixed'
   }
 };
 
