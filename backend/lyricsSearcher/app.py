@@ -2,6 +2,8 @@ __copyright__ = "Copyright (c) 2020 Jina AI Limited. All rights reserved."
 __license__ = "Apache-2.0"
 
 import os
+from flask import (Flask, render_template, jsonify, send_from_directory, request)
+from flask_cors import CORS
 
 import click
 from jina.flow import Flow
@@ -14,23 +16,51 @@ def config():
     )
     os.environ["JINA_WORKSPACE"] = os.environ.get("JINA_WORKSPACE", "workspace")
 
-    os.environ["JINA_PORT"] = os.environ.get("JINA_PORT", str(45678))
+    os.environ["JINA_PORT"] = os.environ.get("JINA_PORT", str(46785))
+
+   
+
+config()
+
+app = Flask(__name__, static_folder="../../frontend/jubilee-front-end/build/static", template_folder="../../frontend/jubilee-front-end/build")
+CORS(app, support_credentials=True)
+
+f = Flow(rest_api=True).load_config("flow-query.yml")
+
+@app.route("/")
+def my_index():
+    
+    return render_template("index.html") 
+
+@app.route('/api/search', methods=['POST'])
+def query_restful():
+    print(request.__dict__)
+    x = f.use_rest_gateway()
+    
+    with f:
+        f.block()
+    print('jina call', x)
+    return x
 
 
-def print_topk(resp, sentence):
-    for d in resp.search.docs:
-        print(f"🔮This might be the Songs you searched for with lyrics: {sentence}")
-        for idx, match in enumerate(d.matches):
+@app.route('/api/test', methods=['GET', 'POST'])
+# 
 
-            score = match.score.value
-            if score < 0.0:
-                continue
-            meta = match.meta_info.decode().split("-")
-            if len(meta) == 2:
-                name, artist = meta
-            lyrics = match.text.strip()
 
-            print(f'> {idx:>2d}({score:.2f}). {name.upper()} :  "{lyrics}"')
+# def print_topk(resp, sentence):
+#     for d in resp.search.docs:
+#         print(f"🔮This might be the Songs you searched for with lyrics: {sentence}")
+#         for idx, match in enumerate(d.matches):
+
+#             score = match.score.value
+#             if score < 0.0:
+#                 continue
+#             meta = match.meta_info.decode().split("-")
+#             if len(meta) == 2:
+#                 name, artist = meta
+#             lyrics = match.text.strip()
+
+#             print(f'> {idx:>2d}({score:.2f}). {name.upper()} :  "{lyrics}"')
 
 def index(num_docs):
     f = Flow().load_config("flow-index.yml")
@@ -44,24 +74,24 @@ def index(num_docs):
 
 
 
-def query(top_k):
-    f = Flow().load_config("flow-query.yml")
-    with f:
-        while True:
-            text = input("please type a sentence: ")
-            if not text:
-                break
+# def query(top_k):
+#     f = Flow().load_config("flow-query.yml")
+#     with f:
+#         while True:
+#             text = input("please type a sentence: ")
+#             if not text:
+#                 break
 
-            def ppr(x):
-                print_topk(x, text)
-            f.search_lines(lines=[text,], output_fn=ppr, top_k=top_k)
+#             def ppr(x):
+#                 print_topk(x, text)
+#             f.search_lines(lines=[text,], output_fn=ppr, top_k=top_k)
 
 
-def query_restful():
-    f = Flow().load_config("flow-query.yml")
-    f.use_rest_gateway()
-    with f:
-        f.block()
+# def query_restful():
+#     f = Flow().load_config("flow-query.yml")
+#     f.use_rest_gateway()
+#     with f:
+#         f.block()
 
 
 def dryrun():
@@ -80,8 +110,9 @@ def dryrun():
 )
 @click.option("--num_docs", "-n", default=50)
 @click.option("--top_k", "-k", default=5)
+
 def main(task, num_docs, top_k):
-    config()
+   
     if task == "index":
         index(num_docs)
     if task == "query":
@@ -93,4 +124,10 @@ def main(task, num_docs, top_k):
 
 
 if __name__ == "__main__":
-    main()
+    #main()
+    app.run(host='0.0.0.0', debug=True)
+
+
+
+
+

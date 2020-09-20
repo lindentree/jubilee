@@ -2,6 +2,7 @@
 with:
   read_only: true
   port_expose: $JINA_PORT
+  rest_api: true
 pods:
   encoder:
     uses: pods/encode.yml

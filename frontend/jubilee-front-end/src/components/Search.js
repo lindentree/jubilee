@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles.module.css';
 import data from '../data/data.json';
+import axios from 'axios';
 
 class Search extends React.Component {
   constructor(props) {
@@ -23,6 +24,14 @@ class Search extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let lyrics = document.querySelector('#input').value;
+    console.log('firing', lyrics)
+    let data = {"top_k": 10, "mode": "search",  "data": [`text:${lyrics}`]}
+
+    axios.post(`http://0.0.0.0:5000/api/search`, data)
+    .then(res => {
+      console.log(res);
+      console.log(res.data);
+    })
     this.props.search(lyrics);
     e.target.reset();
   }
