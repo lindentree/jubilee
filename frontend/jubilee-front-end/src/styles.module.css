@@ -79,6 +79,7 @@ link {
   height: 65px;
   margin: 15px 75px 0 50px;
   float: left;
+  color: white;
   /* border: 1px solid blue; */
 }
 
@@ -214,7 +215,7 @@ input::-webkit-input-placeholder {
 /* ========== recommendations ========= */
 
 .recommend {
-  padding: 50px 28px;
+  padding: 50px 35px;
   margin: 50px;
   border-radius: 20px;
   background: #ffffff;
@@ -251,4 +252,9 @@ input::-webkit-input-placeholder {
   margin: 3rem;
   
 } 
+}
+.floatRight {
+  float: right;
+  margin-top: -30px;
+  color: rgb(226, 224, 224);
 }
