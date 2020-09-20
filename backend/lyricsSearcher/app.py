@@ -28,11 +28,13 @@ def my_index():
 
 @app.route('/api/search', methods=['POST'])
 def query_restful():
-    f = Flow().load_config("flow-query.yml")
+    f = Flow(rest_api=True).load_config("flow-query.yml")
     x = f.use_rest_gateway()
-    return x
+    
     with f:
         f.block()
+
+    return x
 
 
 @app.route('/api/test', methods=['GET', 'POST'])
