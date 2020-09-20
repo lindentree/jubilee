@@ -11,7 +11,7 @@ React.js
 JavaScript
 
 # Setup
-Clone our github repository 
-cd into backend/lyricsSearcher
-$ export FLASK_APP=app.py
+Clone our github repository  
+cd into backend/lyricsSearcher  
+$ export FLASK_APP=app.py  
 then flask run --host=0.0.0.0
