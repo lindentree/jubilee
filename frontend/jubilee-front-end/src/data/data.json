@@ -1,0 +1,26 @@
+[
+    {
+        "Artist" : "Eminem",
+        "Song" : "Kamikaze",
+        "Lyrics": " Okay, how do I say this? Last year didn't work out so well for meOkay, how do I say this? Last year didn't work out so well for meOkay, how do I say this? Last year didn't work out so well for meOkay, how do I say this? Last year didn't work out so well for me ",
+        "Link":"https://www.youtube.com/watch?v=D7GEvpjOPmI"
+    },
+    {
+        "Artist" : "Rihanna",
+        "Song" : "Monster",
+        "Lyrics": "'m friends with the monster that's under my bed And you think I'm crazy, yeah, you think I'm crazy friends with the monster that's under my bed And you think I'm crazy, yeah, you think I'm crazy friends with the monster that's under my bed And you think I'm crazy, yeah, you think I'm crazy ",
+        "Link":"https://www.youtube.com/watch?v=sbRPGGJQao4"
+    },
+    {
+        "Artist" : "Mike Shinoda",
+        "Song" : "New Divide",
+        "Lyrics": " I remembered black skies, the lightning all around meI remembered each flash as time began to blur Like a startling sign that fate had finally found meAnd your voice was all I heard that I get what I deserve So give me reason to prove me wrong, to wash this memory clean Let the floods cross the distance in your eyes ive me reason to fill this hole, connect the space between Let it be enough to reach the truth that lies across this new divide",
+        "Link":"https://www.youtube.com/watch?v=QnS09oQNexA"
+    },
+    {
+        "Artist" : "Mike Shinoda",
+        "Song" : "Make It Up As I Go",
+        "Lyrics": " I keep on running backwards, I keep on losing faith I thought I had the answers, I thought I knew the way  My brother said be patient, my mother held my hand I don't what I'm chasing, I don't know who I am         Woke up this morning holding my head     Thinking last night is one of regret Washing off the bad decisions, the blurry vision",
+        "Link":"https://www.youtube.com/watch?v=MAHif75XlPU"
+    }
+]
