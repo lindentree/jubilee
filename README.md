@@ -1,4 +1,5 @@
-# Jubilee - A song recommender based on your mood or what's on your mind
+# Jubilee 
+A song recommender based on your mood or what's on your mind
 # Introduction
 We created a dataset of songs with lyrics from www.azlyrics.com and used Jina to index it for semantic search. 
 Then the user can type in whatever they're thinking about and get songs with lyrics that hold similar meanings to what they typed.
