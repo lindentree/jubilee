@@ -210,16 +210,14 @@ input::-webkit-input-placeholder {
 /* ========== recommendations ========= */
 
 .recommend {
-  width: 30%;
   padding: 50px 28px;
   margin: 50px;
   border-radius: 20px;
   background: #ffffff;
-  box-shadow: 20px 20px 60px #d9d9d9,
-  -20px -20px 60px #ffffff;
   font-size: 1.2rem;
   font-weight: lighter;
   text-align: left;
+  box-shadow: 1px 5px 20px rgba(214, 213, 213, 0.356);
 }
 
 .songList {

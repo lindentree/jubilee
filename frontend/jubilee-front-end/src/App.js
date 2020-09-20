@@ -7,7 +7,6 @@ import Recommendation from './components/Recommendation';
 function App() {
   return (
     <div>
-          < Recommendation / >
       <Header />
       <Layout/>
     </div>

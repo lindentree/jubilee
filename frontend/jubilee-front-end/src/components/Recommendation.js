@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles.module.css';
 import recommend from '../data/recommend.json';
-
+import Modal from 'react-modal';
 
 class Recommendation extends React.Component {
 
