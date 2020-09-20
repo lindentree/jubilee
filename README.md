@@ -11,7 +11,7 @@ React.js
 JavaScript
 
 # Setup
-Clone our github repository  
-cd into backend/lyricsSearcher  
-$ export FLASK_APP=app.py  
-then flask run --host=0.0.0.0
+Clone our github repository 
+cd into frontend/jubilee-front-end and `npm run build`
+then cd into backend/lyricsSearcher and `export FLASK_APP=app.py`  
+then `flask run --host=0.0.0.0` and the app will be available at localhost:5000 in your browser
