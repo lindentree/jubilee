@@ -5,9 +5,9 @@ We created a dataset of songs with lyrics from www.azlyrics.com and used Jina to
 Then the user can type in whatever they're thinking about and get songs with lyrics that hold similar meanings to what they typed.
 
 # Tech Stack
-Jina.ai
-Flask 
-React.js
+Jina.ai  
+Flask   
+React.js  
 JavaScript
 
 # Setup
