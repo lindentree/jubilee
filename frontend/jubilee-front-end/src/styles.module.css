@@ -76,7 +76,7 @@ link {
 }
 
 .logo {
-  height: 65px;
+  height: 100px;
   margin: 15px 75px 0 50px;
   float: left;
   color: white;
@@ -223,6 +223,7 @@ input::-webkit-input-placeholder {
   font-weight: lighter;
   text-align: left;
   box-shadow: 1px 5px 20px rgba(214, 213, 213, 0.356);
+  overflow: auto;
 }
 
 .songList {
