@@ -235,7 +235,7 @@ input::-webkit-input-placeholder {
   padding-left: 8px;
 }
 
-// Media query to display single column on tablets and mobiles
+/* Media query to display single column on tablets and mobiles*/
 
 @media screen and  (max-width:1000px){
  .displayContainer {
