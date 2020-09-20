@@ -2,6 +2,8 @@ import React from 'react';
 import Search from './Search';
 import Display from './Display'
 import data from '../data/data.json';
+import Recommendation from './Recommendation';
+
 class Parent extends React.Component {
      constructor(props){
          super(props);
@@ -10,7 +12,7 @@ class Parent extends React.Component {
          }
          this.search = this.search.bind(this);
      }
- 
+
      search (lyrics) {
          const song = data.filter((item )=>{
             if(item["Lyrics"].toLowerCase().includes(lyrics)){
