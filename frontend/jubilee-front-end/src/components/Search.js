@@ -24,6 +24,7 @@ class Search extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let lyrics = document.querySelector('#input').value;
+    console.log('firing', lyrics)
     let data = {"top_k": 10, "mode": "search",  "data": [`text:${lyrics}`]}
 
     axios.post(`http://0.0.0.0:5000/api/search`, data)
