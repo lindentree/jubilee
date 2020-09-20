@@ -51,7 +51,7 @@ class Search extends React.Component {
             name="lyrics"
             onChange={this.handleChange}
             required
-            placeholder="Type the lyrics in your mind..."
+            placeholder="Type whatever's on your mind..."
           />
           <button type="submit" value="submit"
             className = {styles.searchBtn}>

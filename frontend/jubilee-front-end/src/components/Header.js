@@ -12,10 +12,10 @@ function Header() {
             <span className={styles.titleMain}>JUBILEE</span>
           </h1>
           <p className={styles.titleSub}>
-            Having trouble remembering a song?
+            Got something on your mind?
           </p>
           <p className={styles.titleSub}>
-            Type whatever line you remember and we’ ll help you out
+            Type it here and we'll recommend songs with lyrics that relate.
           </p>
         </div>
       </div>
